@@ -23,6 +23,13 @@ and  Address.State='CA'
 
 -- Query 4 : Show how many people have addresses in each state
 
+Select  Persons.FirstName 
+from Persons 
+inner join Address 
+on Persons.PersonID=Address.PersonID
+group by Persons.FirstName
+Having count( distinct Address.State)=count(distinct Persons.PersonID)
+
 -- Query 5 : Show the % of people that have multiple addresses
 
 Select (count(distinct Address.PersonID)/
