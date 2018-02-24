@@ -1,3 +1,6 @@
+--Database diagram was developed by using online tool, Quick Database Diagrams 
+--View Database Diagram.png
+
 CREATE TABLE Persons (
     PersonID int NOT NULL PRIMARY KEY,
     FirstName varchar(255)NOT NULL,
